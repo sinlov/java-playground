@@ -1,3 +1,5 @@
+[![Java-CI-with-Gradle](https://github.com/sinlov/java-playground/workflows/Java-CI-with-Gradle/badge.svg?branch=main)](https://github.com/sinlov/java-playground/actions?query=workflow%3AJava-CI-with-Gradle)
+
 # java-playground
 
 - [https://github.com/sinlov/java-playground](https://github.com/sinlov/java-playground)

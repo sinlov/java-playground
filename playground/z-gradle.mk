@@ -7,6 +7,9 @@ playgroundTasks:
 playgroundTasksAll:
 	./gradlew :$(playgroundGradleName):tasks --all
 
+playgroundClean:
+	./gradlew :$(playgroundGradleName):clean
+
 playgroundDependencies:
 	./gradlew :$(playgroundGradleName):dependencies
 
@@ -21,6 +24,12 @@ playgroundDependentComponents:
 
 playgroundTest:
 	./gradlew :$(playgroundGradleName):test
+
+playgroundTestInfo: playgroundClean
+	@./gradlew :$(playgroundGradleName):test --info
+
+playgroundJacocoTestReport:
+	./gradlew :$(playgroundGradleName):jacocoTestReport
 
 help-playground-gradle:
 	@echo "=> $(playgroundGradleName)/z-gradle.mk : gradle $(playgroundGradleName) task"

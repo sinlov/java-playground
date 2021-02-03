@@ -26,3 +26,5 @@ jobs:
       run: ./gradlew buildEnvironment --warning-mode all
     - name:  Build with Gradle playground clean test
       run: ./gradlew playground:clean playground:test --info
+    - name: Build with Gradle dashboard jacocoTestReport
+      run: ./gradlew playground:jacocoTestReport

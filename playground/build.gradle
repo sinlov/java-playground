@@ -13,6 +13,8 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+apply from: rootProject.file("gradle/jacoco/jacoco-simple.gradle")
+
 dependencies {
     // implementation fileTree(dir: 'libs', include: ['*.jar'])
     // testCompile test_implement.junit
@@ -33,6 +35,13 @@ test {
         events "PASSED", "FAILED", "SKIPPED"
     }
     failFast = true
+    jacoco {
+//        enabled = false
+        includeNoLocationClasses = false
+        excludes = [
+//                "**/com/sinlov/java/playground/*"
+        ]
+    }
 }
 
 //uploadArchives {
