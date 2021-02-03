@@ -22,9 +22,6 @@ buildscript {
         jcenter()
         mavenCentral()
     }
-    tasks.withType(JavaCompile) {
-        options.encoding = "UTF-8"
-    }
     dependencies {
 //        classpath 'eu.appsatori:gradle-fatjar-plugin:0.3'
     }
@@ -39,6 +36,9 @@ allprojects {
     apply plugin: 'java'
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
 }
 
 //task cleanAll(type: Delete) {
