@@ -23,6 +23,8 @@ subprojects {
                 org_apache_commons_commons_lang: 'org.apache.commons:commons-lang3:3.5',
                 commons_codec_commons_codec    : 'commons-codec:commons-codec:1.13',
                 com_java_faker                 : 'com.github.javafaker:javafaker:1.0.2',
+                cglib_cglib                    : 'cglib:cglib:3.3.0',
+
         ]
     }
 }

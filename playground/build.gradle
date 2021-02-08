@@ -25,6 +25,7 @@ dependencies {
 
     // compile base_depend.commons_cli
     implementation base_depend.org_apache_commons_commons_lang
+    implementation base_depend.cglib_cglib
     // compileOnly base_depend.commons_cli
 }
 test {
