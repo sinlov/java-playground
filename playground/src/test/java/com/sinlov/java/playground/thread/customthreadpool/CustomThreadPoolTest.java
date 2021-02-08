@@ -8,7 +8,7 @@ import test.TempTest;
 import java.util.concurrent.TimeUnit;
 
 @FixMethodOrder(MethodSorters.JVM)
-public class AscendingCustomThreadPoolTest extends TempTest {
+public class CustomThreadPoolTest extends TempTest {
     private static final int TEST_INIT_SIZE = 100;
 
     @Test
