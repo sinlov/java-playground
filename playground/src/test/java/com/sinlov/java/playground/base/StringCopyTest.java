@@ -18,6 +18,8 @@ public class StringCopyTest extends TempTest {
     public void test_copy() {
         String chars1 = new String(chars);
         assertEquals(chars1, chars);
+        String chars11 = chars;
+        assertEquals(chars1, chars11);
         String chars2 = null;
         String chars3 = null;
         if (chars1.length() > 3) {
