@@ -28,3 +28,9 @@ jobs:
       run: ./gradlew playground:clean playground:test --info
     - name: Build with Gradle dashboard jacocoTestReport
       run: ./gradlew playground:jacocoTestReport
+    - name: Codecov
+      uses: codecov/codecov-action@v1.2.1
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
+        #        directory: ./playground/build/,./designpatterns/build/
+        verbose: false
