@@ -7,12 +7,21 @@ import static org.junit.Assert.*;
 
 public class HexUtilsTest extends TempTest {
 
-    public static final String TEST_STR_TWO = "12345678qwertyui";
-    public static final String TEST_HEX_STR = "4fb136d957b092cd29";
+    public static final String TEST_STR_ONE = "12345678qwertyui";
+    public static final String TEST_HEX_ONE = "31323334353637387177657274797569";
+    public static final String TEST_HEX_STR_2 = "4fb136d957b092cd29";
+
+    @Test
+    public void base() {
+        byte[] bytes = TEST_STR_ONE.getBytes();
+        String hexStr = HexUtils.bytes2HexStr(bytes);
+        System.out.println("hexStr = " + hexStr);
+        assertEquals(TEST_HEX_ONE, hexStr);
+    }
 
     @Test
     public void hexStr2Bytes() {
-        byte[] hexBytes = HexUtils.hexStr2Bytes(TEST_HEX_STR);
+        byte[] hexBytes = HexUtils.hexStr2Bytes(TEST_HEX_STR_2);
         assertNotEquals(null, hexBytes);
         assert hexBytes != null;
         for (byte b :
@@ -36,7 +45,7 @@ public class HexUtilsTest extends TempTest {
 
     @Test
     public void bytes2HexStr() {
-        byte[] strData = TEST_STR_TWO.getBytes();
+        byte[] strData = TEST_STR_ONE.getBytes();
         String bytes2HexStr = HexUtils.bytes2HexStr(strData);
         System.out.println("Datas: " + bytes2HexStr);
         assertEquals("31323334353637387177657274797569", bytes2HexStr);
@@ -44,7 +53,7 @@ public class HexUtilsTest extends TempTest {
 
     @Test
     public void byte2HexStr() {
-        byte[] strData = TEST_STR_TWO.getBytes();
+        byte[] strData = TEST_STR_ONE.getBytes();
         for (byte data :
                 strData) {
             String byte2HexStr = HexUtils.byte2HexStr(data);
