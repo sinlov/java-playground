@@ -1,11 +1,5 @@
 .PHONY: test check clean build dist all
 
-TOP_DIR := $(shell pwd)
-
-# ifeq ($(FILE), $(wildcard $(FILE)))
-# 	@ echo target file not found
-# endif
-
 env:
 	java --version
 	@gradle -v

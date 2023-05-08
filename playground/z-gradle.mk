@@ -2,34 +2,34 @@
 playgroundGradleName ?= playground
 
 playgroundTasks:
-	./gradlew :$(playgroundGradleName):tasks
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):tasks
 
 playgroundTasksAll:
-	./gradlew :$(playgroundGradleName):tasks --all
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):tasks --all
 
 playgroundClean:
-	./gradlew :$(playgroundGradleName):clean
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):clean
 
 playgroundDependencies:
-	./gradlew :$(playgroundGradleName):dependencies
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):dependencies
 
 playgroundDependDefault:
-	./gradlew :$(playgroundGradleName):dependencies --configuration default
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):dependencies --configuration default
 
 playgroundDependCompileClasspath:
-	./gradlew :$(playgroundGradleName):dependencies --configuration compileClasspath
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):dependencies --configuration compileClasspath
 
 playgroundDependentComponents:
-	./gradlew :$(playgroundGradleName):dependentComponents
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):dependentComponents
 
 playgroundTest:
-	./gradlew :$(playgroundGradleName):test
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):test
 
 playgroundTestInfo: playgroundClean
-	@./gradlew :$(playgroundGradleName):test --info
+	@${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):test --info
 
 playgroundJacocoTestReport:
-	./gradlew :$(playgroundGradleName):jacocoTestReport
+	${ENV_GRADLE_WRAPPER_EXEC} :$(playgroundGradleName):jacocoTestReport
 
 help-playground-gradle:
 	@echo "=> $(playgroundGradleName)/z-gradle.mk : gradle $(playgroundGradleName) task"
