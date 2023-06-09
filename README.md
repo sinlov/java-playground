@@ -1,4 +1,4 @@
-[![gradle-java-codecov](https://github.com/sinlov/java-playground/actions/workflows/gradle-java-codecov.yml/badge.svg?branch=main)](https://github.com/sinlov/java-playground/actions/workflows/gradle-java-codecov.yml)
+[![gradle-codecov](https://github.com/sinlov/java-playground/actions/workflows/gradle-codecov.yml/badge.svg?branch=main)](https://github.com/sinlov/java-playground/actions/workflows/gradle-codecov.yml)
 [![codecov](https://codecov.io/gh/sinlov/java-playground/branch/main/graph/badge.svg)](https://codecov.io/gh/sinlov/java-playground)
 
 # java-playground
